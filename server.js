@@ -14,12 +14,31 @@ app.get('/api/books', (req, res) => {
 });
 
 app.post('/api/addbook', (req, res) => {
-  console.log(req.body);
-
   databuffer.push(req.body);
-  console.log(databuffer);
+  res.setHeader('Content-Type', 'application/json');
+  res.send(databuffer);
+  res.end();
+});
 
-  res.send("Book received.");
+app.post('/api/editbook', (req, res) => {
+  databuffer.forEach((item, i, arr) => {
+    if(item.id == req.body.id) {
+      arr[i] = req.body;
+    }
+  })
+  res.setHeader('Content-Type', 'application/json');
+  res.send(databuffer);
+  res.end();
+});
+
+app.post('/api/delbook', (req, res) => {
+  databuffer.forEach((item, i, arr) => {
+    if(item.id == req.body.id) {
+      arr.splice(i, 1);
+    }
+  })
+  res.setHeader('Content-Type', 'application/json');
+  res.send(databuffer);
   res.end();
 });
 

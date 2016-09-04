@@ -1,6 +1,45 @@
-function search(query) {
+function getBooks() {
   return fetch(`/api/books`, {
     accept: 'application/json',
+  }).then(checkStatus)
+    .then(parseJSON);
+}
+
+function addBook(book) {
+  book = JSON.stringify(book);
+  return fetch("/api/addbook/", {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: book
+  }).then(checkStatus)
+    .then(parseJSON);
+}
+
+function editBook(book) {
+  book = JSON.stringify(book);
+  return fetch("/api/editbook/", {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: book
+  }).then(checkStatus)
+    .then(parseJSON);
+}
+
+function delBook(book) {
+  book = JSON.stringify(book);
+  return fetch("/api/delbook/", {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: book
   }).then(checkStatus)
     .then(parseJSON);
 }
@@ -21,6 +60,6 @@ function parseJSON(response) {
   return response.json();
 }
 
-const Api = { search };
+const Api = { getBooks, addBook, editBook, delBook };
 
 export default Api;
