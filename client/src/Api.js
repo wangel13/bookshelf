@@ -1,5 +1,5 @@
-function getBooks() {
-  return fetch(`/api/books`, {
+function getBooks(sort) {
+  return fetch(`/api/books?sort=${sort}`, {
     accept: 'application/json',
   }).then(checkStatus)
     .then(parseJSON);

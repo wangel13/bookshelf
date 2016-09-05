@@ -30,7 +30,7 @@ class EditBook extends Component {
   }
 
   validateFormData = () => {
-    if(ISBNvalidator(this.refs.isbn.value)) {
+    if(ISBNvalidator(this.state.book.ISBN)) {
       this.setState({
         validationISBN: true
       });
@@ -97,7 +97,7 @@ class EditBook extends Component {
       <div className="b-operations">
         <div className="panel panel-default">
           <div className="panel-heading">
-            Добавить книгу на полку
+            Редактировать книгу
           </div>
           <div className="panel-body">
             <form onSubmit={this.handleSubmit}>
@@ -179,7 +179,7 @@ class EditBook extends Component {
                   </div>
                 </div>
               </div>
-              <button type="submit" className="btn btn-block btn-success" disabled={isLoading}>Добавить книгу в каталог</button>
+              <button type="submit" className="btn btn-block btn-success" disabled={isLoading}>Сохранить изменения</button>
               <br/>
               {validationISBN
                 ? ''

@@ -9,8 +9,16 @@ const app = express();
 app.use(bodyParser.json());
 
 app.set('port', (process.env.API_PORT || 3001));
+
 app.get('/api/books', (req, res) => {
-  res.json(databuffer);
+  let sorted = databuffer.slice();
+  function sortByKey(array, key) {
+    return array.sort(function(a, b) {
+        var x = a[key]; var y = b[key];
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+  }
+  res.json(sortByKey(sorted, req.query.sort));
 });
 
 app.post('/api/addbook', (req, res) => {

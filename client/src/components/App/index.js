@@ -20,8 +20,8 @@ class App extends Component {
     this.updateBooks()
   }
 
-  updateBooks = () => {
-    Api.getBooks().then((response) => (
+  updateBooks = (sortBy = 'name') => {
+    Api.getBooks(sortBy).then((response) => (
         this.setState({
           isLoading: false,
           books: response
@@ -47,7 +47,6 @@ class App extends Component {
         })
       )
     )
-    console.log('Delete');
   }
 
   render() {
@@ -66,7 +65,7 @@ class App extends Component {
       <div className="App container">
         <div className="row">
           <div className="col-xs-12 col-sm-5">
-            <Books books={books} handleDeleteBook={this.handleDeleteBook} handleEditBook={this.handleEditBook}/>
+            <Books books={books} onBooksUpdate={this.updateBooks} handleDeleteBook={this.handleDeleteBook} handleEditBook={this.handleEditBook}/>
           </div>
           <div className="col-xs-12 col-sm-7">
             {operations}

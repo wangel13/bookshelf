@@ -22,6 +22,8 @@ const Book = (props) =>
         <br/>
         <strong>Дата публикации:</strong> {props.book.publish_date}
         <br/>
+        <strong>Дата Выхода в тираж:</strong> {props.book.publish_print_date}
+        <br/>
         <strong>Страниц:</strong> {props.book.pages}
         <br/>
       </div>
