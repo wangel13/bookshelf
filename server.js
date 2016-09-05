@@ -6,7 +6,7 @@ const databuffer = JSON.parse(fs.readFileSync('db/books.json', 'utf8'));
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
 
 app.set('port', (process.env.API_PORT || 3001));
 

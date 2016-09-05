@@ -12,7 +12,7 @@
         "lastname": "Megusto"
       }
     ],
-    "pages": 1000,
+    "pages": 100,
     "publish_date": "1805-01-01",
     "publish_print_date": "1805-01-01",
     "publisher": "Litwin Books",
@@ -21,82 +21,34 @@
   },
   {
     "id": 2,
-    "title": "Slow reading2",
+    "title": "The Ethical Engineer",
     "authors" : [
       {
-        "name": "John",
-        "lastname": "Miedema"
-      },
-      {
-        "name": "Sandro",
-        "lastname": "Megusto"
+        "name": "Harry",
+        "lastname": "Harrison"
       }
     ],
-    "pages": 1000,
-    "publish_date": "1803-01-01",
-    "publish_print_date": "1801-01-01",
-    "publisher": "Litwin Books",
-    "ISBN": "9780980200447",
-    "image_url": "https://covers.openlibrary.org/b/id/5546156-L.jpg"
+    "pages": 458,
+    "publish_date": "2016-08-25",
+    "publish_print_date": "2016-08-30",
+    "publisher": "CreateSpace Independent Publishing Platform",
+    "ISBN": "9781537194400",
+    "image_url": "https://audioknigi.club/uploads/topics/preview/00/00/15/57/c475cd5f9e.jpg"
   },
   {
     "id": 3,
-    "title": "Slow reading3",
+    "title": "The Silmarillion",
     "authors" : [
       {
         "name": "John",
-        "lastname": "Miedema"
-      },
-      {
-        "name": "Sandro",
-        "lastname": "Megusto"
+        "lastname": "Tolkien"
       }
     ],
-    "pages": 1000,
-    "publish_date": "1801-01-01",
-    "publish_print_date": "1801-01-01",
-    "publisher": "Litwin Books",
-    "ISBN": "9780980200447",
-    "image_url": "https://covers.openlibrary.org/b/id/5546156-L.jpg"
-  },
-  {
-    "id": 4,
-    "title": "Slow reading4",
-    "authors" : [
-      {
-        "name": "John",
-        "lastname": "Miedema"
-      },
-      {
-        "name": "Sandro",
-        "lastname": "Megusto"
-      }
-    ],
-    "pages": 1000,
-    "publish_date": "1901-01-01",
-    "publish_print_date": "1831-01-01",
-    "publisher": "Litwin Books",
-    "ISBN": "9780980200447",
-    "image_url": "https://covers.openlibrary.org/b/id/5546156-L.jpg"
-  },
-  {
-    "id": 5,
-    "title": "Slow reading5",
-    "authors" : [
-      {
-        "name": "John",
-        "lastname": "Miedema"
-      },
-      {
-        "name": "Sandro",
-        "lastname": "Megusto"
-      }
-    ],
-    "pages": 1000,
-    "publish_date": "1931-01-01",
-    "publish_print_date": "1801-01-01",
-    "publisher": "Litwin Books",
-    "ISBN": "9780980200447",
-    "image_url": "https://covers.openlibrary.org/b/id/5546156-L.jpg"
+    "pages": 1300,
+    "publish_date": "2014-10-07",
+    "publish_print_date": "2014-10-25",
+    "publisher": "Mariner Books",
+    "ISBN": "9780544338012",
+    "image_url": "http://www.tolkienbooks.net/images/main/silm-1977-purple.gif"
   }
 ]

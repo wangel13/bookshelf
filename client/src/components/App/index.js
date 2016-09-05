@@ -17,16 +17,22 @@ class App extends Component {
   }
 
   componentDidMount () {
-    this.updateBooks()
+    let savedSort = localStorage.getItem('sorting');
+    if (savedSort) {
+      this.updateBooks(savedSort)
+    } else {
+      this.updateBooks()
+    }
   }
 
   updateBooks = (sortBy = 'name') => {
-    Api.getBooks(sortBy).then((response) => (
+    Api.getBooks(sortBy).then((response) => {
         this.setState({
           isLoading: false,
           books: response
         })
-      )
+        localStorage.setItem('sorting', sortBy);
+      }
     )
   }
 

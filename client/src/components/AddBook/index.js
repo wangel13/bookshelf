@@ -47,24 +47,40 @@ class AddBook extends Component {
       }
       authors.push(author);
     })
-    let book = {
-        "id": uuid.v1(),
-        "title": this.refs.bookTitle.value,
-        "authors" : authors,
-        "pages": this.refs.pages.value,
-        "publish_date": this.refs.publish_date.value,
-        "publish_print_date": this.refs.publish_print_date.value,
-        "publisher": this.refs.publisher.value,
-        "ISBN": this.refs.isbn.value,
-        "image_url": "https://covers.openlibrary.org/b/id/5546156-L.jpg"
-    };
-    Api.addBook(book).then((response) => {
-        this.setState({
-          isLoading: false
-        })
-        this.props.onBooksUpdate()
+
+    const passData = (image = '') => {
+      let book = {
+          "id": uuid.v1(),
+          "title": this.refs.bookTitle.value,
+          "authors" : authors,
+          "pages": this.refs.pages.value,
+          "publish_date": this.refs.publish_date.value,
+          "publish_print_date": this.refs.publish_print_date.value,
+          "publisher": this.refs.publisher.value,
+          "ISBN": this.refs.isbn.value,
+          "image_url": image
+      };
+      Api.addBook(book).then((response) => {
+          this.setState({
+            isLoading: false
+          })
+          this.props.onBooksUpdate()
+        }
+      );
+    }
+
+    let image_url = this.refs.image_url.files[0];
+    console.log(image_url);
+    let reader = new FileReader();
+    if (image_url) {
+      reader.readAsDataURL(image_url);
+      reader.onload = () => {
+        passData(reader.result)
       }
-    );
+    } else {
+      passData()
+    }
+
   }
 
   addAuthor = (e) => {
@@ -100,7 +116,7 @@ class AddBook extends Component {
                           <label htmlFor="">
                             Фамилия автора
                           </label>
-                          <input onChange={(e) => this.handleChangeAuthor(e, item)} name="lastname" ref={'authorLastName' + item} className="form-control" type="text" maxLength="20" required disabled={isLoading}/>
+                          <input name="lastname" ref={'authorLastName' + item} className="form-control" type="text" maxLength="20" required disabled={isLoading}/>
                         </div>
                       </div>
                       <div className="col-sm-6 col-xs-12">
@@ -159,7 +175,7 @@ class AddBook extends Component {
                     <label htmlFor="">
                       Обложка
                     </label>
-                    <input type="file" disabled={isLoading}/>
+                    <input ref="image_url" type="file" disabled={isLoading}/>
                   </div>
                 </div>
               </div>
