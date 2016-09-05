@@ -3,8 +3,6 @@ import Book from '../Book'
 import './Books.css';
 
 class Books extends Component {
-
-
   render() {
     const { books
            ,handleDeleteBook

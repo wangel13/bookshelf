@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AddBook from '../AddBook';
+import EditBook from '../EditBook';
 import Books from '../Books';
 import Api from '../../Api';
 import './App.css';
@@ -53,6 +54,14 @@ class App extends Component {
     const { books
           , editBook
           , isEditing } = this.state;
+
+    let operations = null;
+    if (isEditing) {
+      operations = <EditBook onBooksUpdate={this.updateBooks} editBook={editBook} isEditing={isEditing}/>
+    } else {
+      operations = <AddBook onBooksUpdate={this.updateBooks}/>
+    }
+
     return (
       <div className="App container">
         <div className="row">
@@ -60,7 +69,7 @@ class App extends Component {
             <Books books={books} handleDeleteBook={this.handleDeleteBook} handleEditBook={this.handleEditBook}/>
           </div>
           <div className="col-xs-12 col-sm-7">
-            <AddBook onBooksUpdate={this.updateBooks} editBook={editBook} isEditing={isEditing}/>
+            {operations}
           </div>
         </div>
       </div>

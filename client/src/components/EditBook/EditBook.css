@@ -1,0 +1,11 @@
+.b-operations {
+  padding-top: 10rem;
+  position: fixed;
+}
+
+@media screen and (max-width: 1024px){
+  .b-operations {
+    position: relative;
+    padding-top: 5rem;
+  }
+}

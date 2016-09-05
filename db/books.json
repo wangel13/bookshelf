@@ -13,15 +13,90 @@
       }
     ],
     "pages": 1000,
-    "publish_date": "March 2009",
+    "publish_date": "1801-01-01",
+    "publish_print_date": "1801-01-01",
     "publisher": "Litwin Books",
     "ISBN": "9780980200447",
     "image_url": "https://covers.openlibrary.org/b/id/5546156-L.jpg"
   },
-  {"id": 2},
-  {"id": 3},
-  {"id": 4},
-  {"id": 5},
-  {"id": 6},
-  {"id": 7}
+  {
+    "id": 2,
+    "title": "Slow reading2",
+    "authors" : [
+      {
+        "name": "John",
+        "lastname": "Miedema"
+      },
+      {
+        "name": "Sandro",
+        "lastname": "Megusto"
+      }
+    ],
+    "pages": 1000,
+    "publish_date": "1801-01-01",
+    "publish_print_date": "1801-01-01",
+    "publisher": "Litwin Books",
+    "ISBN": "9780980200447",
+    "image_url": "https://covers.openlibrary.org/b/id/5546156-L.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Slow reading3",
+    "authors" : [
+      {
+        "name": "John",
+        "lastname": "Miedema"
+      },
+      {
+        "name": "Sandro",
+        "lastname": "Megusto"
+      }
+    ],
+    "pages": 1000,
+    "publish_date": "1801-01-01",
+    "publish_print_date": "1801-01-01",
+    "publisher": "Litwin Books",
+    "ISBN": "9780980200447",
+    "image_url": "https://covers.openlibrary.org/b/id/5546156-L.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Slow reading4",
+    "authors" : [
+      {
+        "name": "John",
+        "lastname": "Miedema"
+      },
+      {
+        "name": "Sandro",
+        "lastname": "Megusto"
+      }
+    ],
+    "pages": 1000,
+    "publish_date": "1801-01-01",
+    "publish_print_date": "1801-01-01",
+    "publisher": "Litwin Books",
+    "ISBN": "9780980200447",
+    "image_url": "https://covers.openlibrary.org/b/id/5546156-L.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Slow reading5",
+    "authors" : [
+      {
+        "name": "John",
+        "lastname": "Miedema"
+      },
+      {
+        "name": "Sandro",
+        "lastname": "Megusto"
+      }
+    ],
+    "pages": 1000,
+    "publish_date": "1801-01-01",
+    "publish_print_date": "1801-01-01",
+    "publisher": "Litwin Books",
+    "ISBN": "9780980200447",
+    "image_url": "https://covers.openlibrary.org/b/id/5546156-L.jpg"
+  }
 ]
