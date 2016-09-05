@@ -55,6 +55,13 @@ class App extends Component {
     )
   }
 
+  changeEditMode = (e) => {
+    e.preventDefault()
+    this.setState({
+      isEditing: false
+    })
+  }
+
   render() {
     const { books
           , editBook
@@ -62,7 +69,7 @@ class App extends Component {
 
     let operations = null;
     if (isEditing) {
-      operations = <EditBook onBooksUpdate={this.updateBooks} editBook={editBook} isEditing={isEditing}/>
+      operations = <EditBook onBooksUpdate={this.updateBooks} editBook={editBook} changeEditMode={this.changeEditMode}/>
     } else {
       operations = <AddBook onBooksUpdate={this.updateBooks}/>
     }

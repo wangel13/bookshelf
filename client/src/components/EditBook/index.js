@@ -93,6 +93,7 @@ class EditBook extends Component {
           , isLoading
           , book } = this.state
     const { authors } = book
+    const { changeEditMode } = this.props
     return (
       <div className="b-operations">
         <div className="panel panel-default">
@@ -179,7 +180,14 @@ class EditBook extends Component {
                   </div>
                 </div>
               </div>
-              <button type="submit" className="btn btn-block btn-success" disabled={isLoading}>Сохранить изменения</button>
+              <div className="row">
+                <div className="col-xs-6">
+                  <button type="submit" className="btn btn-block btn-success" disabled={isLoading}>Сохранить изменения</button>
+                </div>
+                <div className="col-xs-6">
+                  <a href="#" className="btn btn-danger btn-block" onClick={changeEditMode}>Отмена</a>
+                </div>
+              </div>
               <br/>
               {validationISBN
                 ? ''
